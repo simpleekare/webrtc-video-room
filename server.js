@@ -12,7 +12,7 @@ const app = express(),
     key: fs.readFileSync(__dirname + '/rtc-video-room-key.pem'),
     cert: fs.readFileSync(__dirname + '/rtc-video-room-cert.pem')
   },
-  port = process.env.PORT || 3000,
+  port = process.env.PORT || 5000,
   server = process.env.NODE_ENV === 'production' ?
     http.createServer(app).listen(port) :
     https.createServer(options, app).listen(port),

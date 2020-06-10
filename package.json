@@ -1,43 +1,55 @@
 {
-  "name": "webrtc-video-room",
-  "version": "2.0.3",
-  "description": "WebRTC Video Room is a Single-Page App in React using React Router that provides peer-to-peer video and audio communication in a web browser with minimum dependencies required.",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/dondido/webrtc-video-room.git"
-  },
-  "scripts": {
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "postinstall": "webpack --mode production"
-  },
-  "author": "Dian Dimitrov",
-  "keywords": [
-    "WebRTC Video Chat",
-    "RTCPeerConnection",
-    "React"
-  ],
-  "license": "MIT",
-  "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.6",
-    "css-loader": "^3.2.0",
-    "style-loader": "^0.21.0",
-    "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.7"
-  },
-  "dependencies": {
-    "compression": "^1.7.2",
-    "express": "^4.16.3",
-    "react": "^16.4.0",
-    "react-dom": ">=16.7.0",
-    "react-redux": "^5.0.7",
-    "react-router-dom": "^4.3.1",
-    "redux": "^4.0.0",
-    "serve-favicon": "^2.5.0",
-    "socket.io": "^2.1.1"
-  }
+   "name": "webrtc-video-room",
+   "version": "2.0.3",
+   "description": "WebRTC Video Room is a Single-Page App in React using React Router that provides peer-to-peer video and audio communication in a web browser with minimum dependencies required.",
+   "main": "index.js",
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/dondido/webrtc-video-room.git"
+   },
+   "scripts": {
+      "dev": "webpack --mode development",
+      "build": "webpack --mode production",
+      "postinstall": "webpack --mode production"
+   },
+   "author": "Dian Dimitrov",
+   "keywords": [
+      "WebRTC Video Chat",
+      "RTCPeerConnection",
+      "React"
+   ],
+   "license": "MIT",
+   "devDependencies": {
+      "@babel/core": "^7.10.2",
+      "@babel/preset-env": "^7.10.2",
+      "@babel/preset-react": "^7.10.1",
+      "babel-loader": "^8.1.0",
+      "css-loader": "^3.5.3",
+      "style-loader": "^0.21.0",
+      "webpack": "^4.43.0",
+      "webpack-cli": "^3.3.11"
+   },
+   "dependencies": {
+      "compression": "^1.7.2",
+      "express": "^4.16.3",
+      "query-string": "^6.13.0",
+      "react": "^16.13.1",
+      "react-bootstrap": "^1.0.1",
+      "react-dom": "^16.13.1",
+      "react-loadable": "^5.5.0",
+      "react-redux": "^7.2.0",
+      "react-router": "^5.2.0",
+      "react-router-dom": "^5.2.0",
+      "react-router-redux": "^4.0.8",
+      "react-scripts": "^3.4.1",
+      "react-telephone-input": "^4.75.5",
+      "redux": "^4.0.5",
+      "redux-file-upload": "0.0.19",
+      "redux-persist": "^6.0.0",
+      "redux-thunk": "^2.3.0",
+      "serve-favicon": "^2.5.0",
+      "socket.io": "^2.3.0",
+      "socket.io-client": "^2.3.0",
+      "typescript": "^3.9.5"
+   }
 }

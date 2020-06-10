@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import MediaContainer from './MediaContainer'
-import CommunicationContainer from './CommunicationContainer'
-import { connect } from 'react-redux'
-import store from '../store'
-import io from 'socket.io-client'
+import MediaContainer from './MediaContainer';
+import CommunicationContainer from './CommunicationContainer';
+import { connect } from 'react-redux';
+import store from '../store';
+import io from 'socket.io-client';
 
 class RoomPage extends Component {
   constructor(props) {

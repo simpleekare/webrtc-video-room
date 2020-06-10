@@ -1,14 +1,21 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
 import reducers from './reducers';
-const mapStoreToStorage = () =>
-	localStorage.setItem('reduxState', JSON.stringify(store.getState()));
-const persistedState = localStorage.getItem('reduxState')
-	? JSON.parse(localStorage.getItem('reduxState'))
-	: {
-		rooms: [],
-		video: true,
-		audio: true
-	};
-const store = createStore(reducers, persistedState);
-store.subscribe(mapStoreToStorage);
+
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+
+const persistConfig = {
+  key: 'webrtcRoot',
+  storage
+};
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const persistedReducer = persistReducer(persistConfig, reducers);
+
+const store = createStore(persistedReducer, composeEnhancers(
+  applyMiddleware(thunk)
+));
+
+export const persistor = persistStore(store);
 export default store;
